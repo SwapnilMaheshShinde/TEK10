@@ -46,8 +46,39 @@
 
   /* Hero Grid to Single Column */
   .hero-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
     gap: 3rem;
+  }
+
+  .hero-left,
+  .hero-right {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-glance-card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 1.75rem clamp(1.2rem, 3.5vw, 2rem);
+  }
+
+  .glance-item {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .glance-info {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .glance-sub {
+    white-space: normal;
+    word-break: break-word;
   }
 
   /* Editorial Layouts to Single Column */
@@ -135,6 +166,24 @@
     min-height: auto;
   }
 
+  .eyebrow {
+    flex-wrap: wrap;
+    line-height: 1.5;
+    word-break: break-word;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8.5vw, 3.2rem);
+    word-break: break-word;
+  }
+
+  .hero-description {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
@@ -144,6 +193,25 @@
   .hero-actions .btn {
     width: 100%;
     text-align: center;
+  }
+
+  .hero-trust-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+    width: 100%;
+  }
+
+  .trust-item {
+    font-size: 0.72rem;
+    word-break: break-word;
+  }
+
+  .hero-glow,
+  .final-cta-glow {
+    width: 100%;
+    max-width: 100vw;
+    height: 300px;
   }
 
   .pipeline-stage-content {
@@ -250,7 +318,30 @@
 /* Extra Small Phones (<= 420px) */
 @media (max-width: 420px) {
   .hero-title {
-    font-size: 2.4rem;
+    font-size: 2.05rem;
+  }
+
+  .glance-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .glance-item {
+    padding: 0.75rem 0.85rem;
+    gap: 0.75rem;
+  }
+
+  .glance-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .glance-stat {
+    padding: 0.6rem 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .section-title {
@@ -264,6 +355,10 @@
 
   .case-info {
     padding: 1.5rem;
+  }
+
+  .dept-breakdown {
+    grid-template-columns: 1fr;
   }
 
   .contact-form-card {
