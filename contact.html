@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact TEK10 — Let's Build Something.</title>
+  <meta name="description" content="Get in touch with TEK10. Discuss custom software engineering, industrial systems, mobile applications, or AI/ML solutions with our engineering team.">
+  <meta name="theme-color" content="#07080a">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact TEK10 — Start a Project">
+  <meta property="og:description" content="Tell us what you're trying to build. We'll figure out the technology.">
+  <meta property="og:site_name" content="TEK10">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Theme Initialization Script -->
+  <script>
+    (function() {
+      const saved = localStorage.getItem('tek10-theme');
+      const theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Background Ambience -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-grain" aria-hidden="true"></div>
+
+  <!-- Accessible Skip Link -->
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+
+  <!-- =========================================================
+       GLOBAL NAVIGATION
+       ========================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="TEK10 Home">
+        TEK10<span class="dot"></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="capabilities.html" class="nav-link">Capabilities</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
+      </nav>
+
+      <div class="nav-actions-group">
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch between dark and light mode" title="Toggle theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="contact.html" class="nav-cta">
+          Let's Build <span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="nav-toggle" id="navBurger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Full-Screen Mobile Drawer Navigation -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-nav-links" aria-label="Mobile Navigation">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="work.html" class="mobile-nav-link">Work</a>
+      <a href="capabilities.html" class="mobile-nav-link">Capabilities</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="contact.html" class="mobile-nav-link active">Contact</a>
+    </nav>
+
+    <div class="mobile-menu-footer">
+      <div style="display: flex; gap: 1rem; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+        <button class="theme-toggle" aria-label="Toggle theme" style="width: auto; padding: 0.6rem 1rem; gap: 0.5rem;">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <span style="font-family: var(--font-mono); font-size: 0.78rem;">Toggle Theme</span>
+        </button>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Start a Project →</a>
+      <div class="mobile-menu-meta">
+        <a href="tel:+919579119759">+91 95791 19759</a>
+        <a href="mailto:swapnilshinde33777@gmail.com">swapnilshinde33777@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       MAIN CONTENT: CONTACT
+       ========================================================= -->
+  <main id="mainContent" style="padding-top: 140px;">
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="eyebrow">Direct Engineering Inbound</div>
+        <h1 class="hero-title" style="margin-bottom: 1rem;">LET'S BUILD SOMETHING.</h1>
+        <p class="hero-description" style="max-width: 720px; margin-bottom: 2rem;">
+          Have a website, application, software system, AI project or something more complicated in mind? Tell us what you're trying to solve.
+        </p>
+
+        <div class="contact-layout">
+          <!-- Real Enquiry Form Card -->
+          <div class="contact-form-card">
+            <form id="contactForm" novalidate>
+              <!-- Hidden Honeypot to prevent spam bots -->
+              <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off">
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="name" class="form-label">Name <span class="req">*</span></label>
+                  <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="company" class="form-label">Company / Organization</label>
+                  <input type="text" id="company" name="company" class="form-control" placeholder="Company name">
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address <span class="req">*</span></label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="you@company.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 98765 43210">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="project_type" class="form-label">Project Type</label>
+                <select id="project_type" name="project_type" class="form-control">
+                  <option value="Website">Website</option>
+                  <option value="Web Application">Web Application</option>
+                  <option value="Mobile App">Mobile App</option>
+                  <option value="Software">Software</option>
+                  <option value="Industrial Software">Industrial Software</option>
+                  <option value="AI / ML">AI / ML</option>
+                  <option value="Computer Vision">Computer Vision</option>
+                  <option value="Generative AI">Generative AI</option>
+                  <option value="Automation">Automation</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">What are you trying to build? <span class="req">*</span></label>
+                <textarea id="message" name="message" class="form-control" placeholder="Describe the operational challenge, timeline, or engineering requirements..." required></textarea>
+              </div>
+
+              <!-- Form Action Buttons -->
+              <div class="form-dual-actions">
+                <button type="submit" class="btn btn-primary" id="submitBtn">
+                  Send Enquiry <span class="btn-arrow">→</span>
+                </button>
+                <button type="button" class="btn btn-secondary" id="whatsappBtn">
+                  Continue on WhatsApp <span class="btn-arrow">→</span>
+                </button>
+              </div>
+
+              <!-- Privacy Notice -->
+              <p class="form-privacy-note">
+                We'll only use your information to respond to your enquiry.
+              </p>
+
+              <!-- Dynamic Status Box -->
+              <div id="formStatus" class="form-status" role="alert"></div>
+            </form>
+          </div>
+
+          <!-- Direct Contact Information Sidebar -->
+          <div class="contact-sidebar">
+            <div class="contact-card-item">
+              <span class="contact-card-label">Direct Phone</span>
+              <div class="contact-card-value">
+                <a href="tel:+919579119759">+91 95791 19759</a>
+              </div>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Available for project calls and technical discussions.</span>
+            </div>
+
+            <div class="contact-card-item">
+              <span class="contact-card-label">Direct Email</span>
+              <div class="contact-card-value">
+                <a href="mailto:swapnilshinde33777@gmail.com">swapnilshinde33777@gmail.com</a>
+              </div>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Inbound project briefs and technical specifications.</span>
+            </div>
+
+            <div class="contact-card-item">
+              <span class="contact-card-label">Instant Messaging</span>
+              <div class="contact-card-value">
+                <a href="https://wa.me/919579119759?text=Hello%20TEK10%2C%20I%20would%20like%20to%20discuss%20a%20technology%20project." target="_blank" rel="noopener noreferrer" style="color: var(--whatsapp);">
+                  Chat on WhatsApp →
+                </a>
+              </div>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Direct message line for rapid coordination.</span>
+            </div>
+
+            <div class="contact-card-item" style="border-style: dashed;">
+              <span class="contact-card-label">Location</span>
+              <div style="font-size: 1.1rem; color: var(--text-primary); font-weight: 500;">
+                Maharashtra, India
+              </div>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">Serving industrial businesses, enterprises, and remote clients worldwide.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       GLOBAL FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2 class="brand-logo">TEK10<span class="dot"></span></h2>
+          <p class="footer-tagline">
+            Technology Engineering & Digital Product Development.<br>
+            Technology. Built Without Limits.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="capabilities.html">Capabilities</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Capabilities</div>
+          <ul class="footer-list">
+            <li><a href="capabilities.html#web">Web</a></li>
+            <li><a href="capabilities.html#software">Software</a></li>
+            <li><a href="capabilities.html#mobile">Mobile</a></li>
+            <li><a href="capabilities.html#aiml">AI / ML</a></li>
+            <li><a href="capabilities.html#industrial">Industrial Systems</a></li>
+            <li><a href="capabilities.html#automation">Automation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Direct Contact</div>
+          <ul class="footer-list">
+            <li><a href="tel:+919579119759">+91 95791 19759</a></li>
+            <li><a href="mailto:swapnilshinde33777@gmail.com">swapnilshinde33777@gmail.com</a></li>
+            <li><a href="https://wa.me/919579119759?text=Hello%20TEK10%2C%20I%20would%20like%20to%20discuss%20a%20technology%20project." target="_blank" rel="noopener noreferrer">Chat on WhatsApp →</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 TEK10. All rights reserved.</div>
+        <div>You bring the problem. We build the technology.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919579119759?text=Hello%20TEK10%2C%20I%20would%20like%20to%20discuss%20a%20technology%20project." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat directly with TEK10 on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16 2a13.9 13.9 0 0 0-12 21L2 30l7.2-1.9A13.9 13.9 0 1 0 16 2zm0 25.5a11.5 11.5 0 0 1-5.9-1.6l-.4-.3-4.4 1.1 1.2-4.2-.3-.4A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.3-.2-2-.1-2.3-1.1s-.6-.2-.8.2-.9 1.1-1.1 1.3-.4.2-.7 0a9.2 9.2 0 0 1-2.7-1.7 10.2 10.2 0 0 1-1.9-2.3c-.2-.3 0-.5.2-.7l.5-.6a2.3 2.3 0 0 0 .3-.5.7.7 0 0 0 0-.6c0-.2-.8-2-1.1-2.7s-.6-.6-.8-.6h-.7a1.4 1.4 0 0 0-1 .5 4.3 4.3 0 0 0-1.3 3.2c0 1.9 1.4 3.7 1.6 3.9s2.7 4.1 6.5 5.8a22 22 0 0 0 2.2.8 5.3 5.3 0 0 0 2.4.2c.7-.1 2.3-.9 2.6-1.8s.3-1.6.2-1.8c-.1-.1-.3-.2-.6-.4z"/>
+    </svg>
+    <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+  </a>
+
+  <!-- Project Scripts -->
+  <script src="js/main.js" defer></script>
+  <script src="js/contact.js" defer></script>
+</body>
+</html>
+

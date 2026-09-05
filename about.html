@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About TEK10 — We Build. We Learn. We Solve.</title>
+  <meta name="description" content="TEK10 was created with a simple belief: technology should solve problems, not create more of them. Meet the founders and our engineering principles.">
+  <meta name="theme-color" content="#07080a">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About TEK10 — Technology Engineering & Digital Product Development">
+  <meta property="og:description" content="We combine software engineering, modern application development and intelligent technologies to solve real-world problems.">
+  <meta property="og:site_name" content="TEK10">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Theme Initialization Script -->
+  <script>
+    (function() {
+      const saved = localStorage.getItem('tek10-theme');
+      const theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Background Ambience -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-grain" aria-hidden="true"></div>
+
+  <!-- Accessible Skip Link -->
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+
+  <!-- =========================================================
+       GLOBAL NAVIGATION
+       ========================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="TEK10 Home">
+        TEK10<span class="dot"></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="capabilities.html" class="nav-link">Capabilities</a>
+        <a href="about.html" class="nav-link active" aria-current="page">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions-group">
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch between dark and light mode" title="Toggle theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="contact.html" class="nav-cta">
+          Let's Build <span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="nav-toggle" id="navBurger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Full-Screen Mobile Drawer Navigation -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-nav-links" aria-label="Mobile Navigation">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="work.html" class="mobile-nav-link">Work</a>
+      <a href="capabilities.html" class="mobile-nav-link">Capabilities</a>
+      <a href="about.html" class="mobile-nav-link active">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </nav>
+
+    <div class="mobile-menu-footer">
+      <div style="display: flex; gap: 1rem; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+        <button class="theme-toggle" aria-label="Toggle theme" style="width: auto; padding: 0.6rem 1rem; gap: 0.5rem;">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <span style="font-family: var(--font-mono); font-size: 0.78rem;">Toggle Theme</span>
+        </button>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Start a Project →</a>
+      <div class="mobile-menu-meta">
+        <a href="tel:+919579119759">+91 95791 19759</a>
+        <a href="mailto:swapnilshinde33777@gmail.com">swapnilshinde33777@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       MAIN CONTENT: ABOUT US
+       ========================================================= -->
+  <main id="mainContent" style="padding-top: 140px;">
+
+    <!-- BRAND STORY & ETHOS -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="eyebrow">Our Origins & Approach</div>
+        <h1 class="hero-title" style="margin-bottom: 2rem;">
+          WE BUILD.<br>
+          WE LEARN.<br>
+          WE SOLVE.
+        </h1>
+
+        <div style="max-width: 840px; font-size: 1.25rem; line-height: 1.8; color: var(--text-primary);">
+          <p style="margin-bottom: 1.5rem; color: var(--text-primary);">
+            TEK10 was created with a simple belief: technology should solve problems, not create more of them.
+          </p>
+          <p style="margin-bottom: 1.5rem;">
+            We majorly deal in industrial engineering projects that eliminate manual work, replace error-prone logbooks, and automate operations across manufacturing facilities, logistics pipelines, and enterprise systems.
+          </p>
+          <p style="margin-bottom: 3.5rem;">
+            From high-throughput web applications and mobile platforms to edge computer-vision and IoT telemetry, we engineer technology built for real-world resilience.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <span class="eyebrow">Pillar 01</span>
+            <h3>Real Problems First</h3>
+            <p>
+              We don't chase technology trends for the sake of novelty. We examine operational friction, identify quantifiable constraints, and choose the most reliable architecture that solves the root issue.
+            </p>
+          </div>
+          <div class="about-card">
+            <span class="eyebrow">Pillar 02</span>
+            <h3>Production Quality</h3>
+            <p>
+              From custom factory telemetry to AI inspection pipelines and customer-facing websites, every line of code is engineered for speed, clean maintenance, and long-term operational uptime.
+            </p>
+          </div>
+          <div class="about-card">
+            <span class="eyebrow">Pillar 03</span>
+            <h3>Industrial Automation</h3>
+            <p>
+              We majorly specialize in removing manual labor and physical paper registers from daily operations. Our systems automate repetitive workflows, protect data accuracy, and run 24/7 unattended.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDERS SECTION -->
+    <section class="section section-border-top" id="founders">
+      <div class="container">
+        <span class="eyebrow">Leadership & Engineering</span>
+        <h2 class="editorial-title" style="margin-bottom: 1rem;">FOUNDERS</h2>
+        <p style="max-width: 680px; margin-bottom: 3rem;">
+          Hands-on technical leadership with verified experience across industrial software, AI/ML engineering, and full-stack development.
+        </p>
+
+        <div class="founders-grid">
+
+          <!-- Founder 01: Swapnil Shinde -->
+          <article class="founder-card">
+            <div class="founder-media">
+              <img 
+                src="assets/images/swapnil.PNG" 
+                alt="Swapnil Shinde — Founder of TEK10" 
+                class="founder-img" 
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              >
+              <!-- Sleek Monogram / Geometric Fallback -->
+              <div class="founder-monogram" style="display: none;">
+                <div class="monogram-circle">SS</div>
+                <span class="monogram-label">SWAPNIL SHINDE // FOUNDER</span>
+              </div>
+            </div>
+
+            <div class="founder-body">
+              <div>
+                <div class="founder-role">Founder</div>
+                <h3 class="founder-name">Swapnil Shinde</h3>
+                <div class="founder-role" style="color: var(--text-secondary); margin-bottom: 1rem;">
+                  Software Engineer &bull; AI/ML & Data Science Specialist
+                </div>
+
+                <!-- Education Badge -->
+                <div class="qualification-badge" style="margin-bottom: 1.25rem;">
+                  🎓 B.Tech in Artificial Intelligence &amp; Data Science — AISSMS IOIT, Pune
+                </div>
+
+                <p class="founder-bio">
+                  Swapnil Shinde is a technology-focused software developer and AI/ML engineer holding a B.Tech in Artificial Intelligence and Data Science from AISSMS IOIT, Pune.
+                </p>
+                <p class="founder-bio">
+                  He specializes in engineering real-world intelligent systems — from industrial telemetry data ingestion and computer-vision quality inspection pipelines to high-throughput backend microservices and modern responsive web applications.
+                </p>
+                <p class="founder-bio">
+                  With deep hands-on expertise in Python, FastAPI, computer vision (OpenCV, YOLO object detection), and distributed database architectures, Swapnil combines rigorous data science principles with production engineering to solve complex enterprise and industrial challenges.
+                </p>
+
+                <!-- Technical Interests -->
+                <div class="founder-tag-group" style="margin-top: 1.75rem;">
+                  <div class="founder-tag-group-title">Technical Focus &amp; Specialization</div>
+                  <div class="case-tech-list" style="margin-bottom: 0;">
+                    <span class="tech-tag tech-tag-accent">Artificial Intelligence</span>
+                    <span class="tech-tag tech-tag-accent">Machine Learning</span>
+                    <span class="tech-tag">Data Science</span>
+                    <span class="tech-tag">Computer Vision (OpenCV)</span>
+                    <span class="tech-tag">Python &amp; FastAPI</span>
+                    <span class="tech-tag">Software Engineering</span>
+                    <span class="tech-tag">Industrial IoT Telemetry</span>
+                    <span class="tech-tag">Backend Architecture</span>
+                    <span class="tech-tag">Deep Learning Pipelines</span>
+                    <span class="tech-tag">Production Systems</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="founder-contact-bar">
+                <a href="tel:+919579119759">
+                  <span>Phone:</span> +91 95791 19759
+                </a>
+                <a href="mailto:swapnilshinde33777@gmail.com">
+                  <span>Email:</span> swapnilshinde33777@gmail.com
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Founder 02: Digvijay Kesare -->
+          <article class="founder-card">
+            <div class="founder-media">
+              <img 
+                src="assets/images/digvijay.PNG" 
+                alt="Digvijay Kesare — Co-Founder of TEK10" 
+                class="founder-img" 
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              >
+              <!-- Sleek Monogram / Geometric Fallback -->
+              <div class="founder-monogram" style="display: none;">
+                <div class="monogram-circle">DK</div>
+                <span class="monogram-label">DIGVIJAY KESARE // CO-FOUNDER</span>
+              </div>
+            </div>
+
+            <div class="founder-body">
+              <div>
+                <div class="founder-role">Co-Founder</div>
+                <h3 class="founder-name">Digvijay Kesare</h3>
+                <div class="founder-role" style="color: var(--text-secondary); margin-bottom: 1rem;">
+                  ENTC Engineer &bull; Full-Stack Developer &amp; Systems Architect
+                </div>
+
+                <!-- Education Badge -->
+                <div class="qualification-badge">
+                  🎓 B.Tech in Electronics &amp; Telecommunication (ENTC) — AISSMS IOIT, Pune
+                </div>
+
+                <!-- Industry Experience Badge -->
+                <div class="qualification-badge badge-exp" style="margin-bottom: 1.25rem;">
+                  💼 Industry Experience in Web Development &amp; Software Engineering
+                </div>
+
+                <p class="founder-bio">
+                  Digvijay Kesare is an ENTC engineer and full-stack software developer holding a B.Tech in Electronics &amp; Telecommunication from AISSMS IOIT, Pune, with verified industry working experience across modern software development.
+                </p>
+                <p class="founder-bio">
+                  He has worked with technology companies architecting enterprise software, high-performance web applications, scalable backend microservices, and robust API ecosystems designed for mission-critical operations.
+                </p>
+                <p class="founder-bio">
+                  Leveraging his engineering foundation in telecommunication systems and hardware signals alongside modern full-stack development, Digvijay excels at application architecture, database engineering, secure authentication models, and resilient cloud deployments.
+                </p>
+
+                <!-- Core Strengths -->
+                <div class="founder-tag-group" style="margin-top: 1.75rem;">
+                  <div class="founder-tag-group-title">Key Strengths &amp; Industry Expertise</div>
+                  <div class="case-tech-list" style="margin-bottom: 0;">
+                    <span class="tech-tag tech-tag-accent">Full-Stack Development</span>
+                    <span class="tech-tag tech-tag-accent">Software Industry Experience</span>
+                    <span class="tech-tag">Web Applications</span>
+                    <span class="tech-tag">Backend Systems &amp; Microservices</span>
+                    <span class="tech-tag">REST &amp; WebSocket APIs</span>
+                    <span class="tech-tag">Application Architecture</span>
+                    <span class="tech-tag">Telecom &amp; Signal Fundamentals</span>
+                    <span class="tech-tag">Database Modeling</span>
+                    <span class="tech-tag">Cloud Infrastructure</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="founder-contact-bar" style="margin-top: auto;">
+                <span style="color: var(--text-muted); font-size: 0.8rem;">Co-Founder &amp; Full-Stack Engineer // TEK10</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGINEERING CORE & TECHNICAL TEAM (ANONYMOUS SPECIALIZED WINGS) -->
+    <section class="tech-team-section" id="team">
+      <div class="container">
+        <span class="eyebrow">Engineering Structure &amp; Technical Capabilities</span>
+        <h2 class="editorial-title" style="margin-bottom: 1rem;">THE TECHNICAL CORE</h2>
+        <p style="max-width: 720px; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7;">
+          Behind our technical leadership is a multidisciplinary engineering team organized into dedicated operational wings. We specialize in deep industrial problems, machine vision, and mission-critical software automation.
+        </p>
+
+        <div class="team-grid">
+          <!-- Wing 01: Industrial IoT & Embedded Systems -->
+          <article class="team-card">
+            <div>
+              <div class="team-icon-indicator">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3 class="team-wing-name">Industrial IoT &amp; Embedded Systems</h3>
+              <div class="team-wing-focus">Hardware &bull; Telemetry Ingestion &bull; PLC Interfacing</div>
+              <p class="team-wing-desc">
+                Engineers focused on extracting high-frequency signals from factory machinery, RS-485 serial communication, Modbus RTU/TCP protocols, PLC integration, and edge compute firmware that withstands high-temperature industrial environments.
+              </p>
+            </div>
+            <div class="team-skills-list">
+              <span class="team-skill-pill">Modbus RS-485</span>
+              <span class="team-skill-pill">PLC Interfacing</span>
+              <span class="team-skill-pill">Edge Gateways</span>
+              <span class="team-skill-pill">Telemetry Daemons</span>
+              <span class="team-skill-pill">Sensor Networks</span>
+              <span class="team-skill-pill">Factory Uptime</span>
+            </div>
+          </article>
+
+          <!-- Wing 02: Computer Vision & AI/ML Systems -->
+          <article class="team-card">
+            <div>
+              <div class="team-icon-indicator">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+              <h3 class="team-wing-name">Computer Vision &amp; AI/ML Systems</h3>
+              <div class="team-wing-focus">Machine Vision &bull; Real-Time Defect Detection &bull; PyTorch</div>
+              <p class="team-wing-desc">
+                Engineers specializing in low-latency camera stream processing, YOLO object detection models, conveyor tracking, visual anomaly recognition, and neural network optimization for automated quality control without manual inspection.
+              </p>
+            </div>
+            <div class="team-skills-list">
+              <span class="team-skill-pill">YOLOv8 / YOLOv11</span>
+              <span class="team-skill-pill">OpenCV Pipelines</span>
+              <span class="team-skill-pill">Object Detection</span>
+              <span class="team-skill-pill">Conveyor Tracking</span>
+              <span class="team-skill-pill">Model Optimization</span>
+              <span class="team-skill-pill">Automated Inspection</span>
+            </div>
+          </article>
+
+          <!-- Wing 03: Full-Stack & Cloud Architecture -->
+          <article class="team-card">
+            <div>
+              <div class="team-icon-indicator">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="team-wing-name">Full-Stack &amp; Cloud Systems</h3>
+              <div class="team-wing-focus">High-Concurrency Microservices &bull; Data Pipelines</div>
+              <p class="team-wing-desc">
+                Software architects designing reactive web applications, microservices in Python &amp; FastAPI, time-series telemetry databases, secure RBAC authentication, and real-time operational control dashboards that handle continuous enterprise scale.
+              </p>
+            </div>
+            <div class="team-skills-list">
+              <span class="team-skill-pill">Python &amp; FastAPI</span>
+              <span class="team-skill-pill">Time-Series DBs</span>
+              <span class="team-skill-pill">PostgreSQL</span>
+              <span class="team-skill-pill">WebSocket APIs</span>
+              <span class="team-skill-pill">Docker &amp; Cloud</span>
+              <span class="team-skill-pill">Microservices</span>
+            </div>
+          </article>
+
+          <!-- Wing 04: Industrial Automation & Workflow Optimization -->
+          <article class="team-card">
+            <div>
+              <div class="team-icon-indicator">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                </svg>
+              </div>
+              <h3 class="team-wing-name">Industrial Automation &amp; Workflow</h3>
+              <div class="team-wing-focus">Manual Labor Elimination &bull; Paperless Digitization</div>
+              <p class="team-wing-desc">
+                Engineers focused directly on eliminating repetitive manual labor. We replace physical paperwork, manual meter readings, and tedious multi-platform data entry with automated synchronization engines and digital verification workflows.
+              </p>
+            </div>
+            <div class="team-skills-list">
+              <span class="team-skill-pill">Process Automation</span>
+              <span class="team-skill-pill">Paperless Workflows</span>
+              <span class="team-skill-pill">Multi-Store Sync</span>
+              <span class="team-skill-pill">Automated Dispatch</span>
+              <span class="team-skill-pill">API Orchestration</span>
+              <span class="team-skill-pill">Human Error Prevention</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="team-banner-note">
+          <div class="team-banner-note-text">
+            <span>Direct Engineering Access:</span> At TEK10, you speak directly to the software engineers, researchers, and systems architects building your technology — zero sales middlemen or non-technical account managers.
+          </div>
+          <div class="team-banner-note-badge">
+            ✓ 100% Engineering Led
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTS & INDUSTRIAL PARTNERS SHOWCASE -->
+    <section class="clients-section" id="clients">
+      <div class="container">
+        <div class="clients-header">
+          <span class="eyebrow">Clients &amp; Industrial Partners</span>
+          <h2 class="editorial-title">TRUSTED BY INDUSTRY LEADERS &amp; ENTERPRISES</h2>
+          <p style="max-width: 680px; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7;">
+            We majorly deal in heavy industry and commercial automation projects that eliminate manual work, replace error-prone logbooks, and automate operations.
+          </p>
+        </div>
+
+        <!-- Clients Grid -->
+        <div class="clients-grid">
+          <!-- Client 01: Paranjape Autocast -->
+          <article class="client-card">
+            <div>
+              <div class="client-logo-box">
+                <div class="client-logo-wrap theme-light-bg">
+                  <img 
+                    src="assets/images/clients/client-paranjape.png" 
+                    alt="Paranjape Autocast Pvt. Ltd. Logo" 
+                    class="client-logo-img"
+                    loading="lazy"
+                  >
+                </div>
+              </div>
+              <div class="client-industry">Industrial Manufacturing &bull; Auto Castings</div>
+              <h3 class="client-name">Paranjape Autocast Pvt. Ltd.</h3>
+              <p class="client-impact">
+                Engineered real-time industrial telemetry and energy monitoring infrastructure across plant lines. Eliminated manual sub-meter paper logs, enabled instant furnace load analysis, and automated operational energy accounting.
+              </p>
+            </div>
+            <div class="client-deliverable-badge">
+              ⚡ Modbus RS-485 Telemetry &amp; Automated Energy Intelligence
+            </div>
+          </article>
+
+          <!-- Client 02: Valorex.site -->
+          <article class="client-card">
+            <div>
+              <div class="client-logo-box">
+                <div class="client-logo-wrap theme-dark-bg">
+                  <img 
+                    src="assets/images/clients/client-valorex.png" 
+                    alt="Valorex Logo" 
+                    class="client-logo-img"
+                    loading="lazy"
+                  >
+                </div>
+              </div>
+              <div class="client-industry">Global E-Commerce &bull; Automated Dropshipping</div>
+              <h3 class="client-name">Valorex.site</h3>
+              <p class="client-impact">
+                Architected high-throughput dropshipping automation, multi-vendor order routing, live inventory synchronization, and web platform infrastructure, eliminating manual spreadsheet order processing and multi-store overhead.
+              </p>
+            </div>
+            <div class="client-deliverable-badge">
+              📦 Automated Dropshipping Pipeline &amp; Multi-Store Engine
+            </div>
+          </article>
+
+          <!-- Client 03: PurePort Exporters -->
+          <article class="client-card">
+            <div>
+              <div class="client-logo-box">
+                <div class="client-logo-wrap theme-light-bg">
+                  <img 
+                    src="assets/images/clients/client-pureport.png" 
+                    alt="PurePort Exporters Logo" 
+                    class="client-logo-img"
+                    loading="lazy"
+                  >
+                </div>
+              </div>
+              <div class="client-industry">International Trade &bull; Export Logistics</div>
+              <h3 class="client-name">PurePort Exporters</h3>
+              <p class="client-impact">
+                Developed automated export tracking, digital cargo manifests, and documentation management software, replacing error-prone manual paperwork and streamlining cross-border logistics dispatch.
+              </p>
+            </div>
+            <div class="client-deliverable-badge">
+              🌐 Export Documentation Engine &amp; Cargo Manifest Portal
+            </div>
+          </article>
+        </div>
+
+        <!-- Industrial Automation Focus Banner -->
+        <div class="automation-focus-banner">
+          <div>
+            <span class="eyebrow">Our Core Engineering Mandate</span>
+            <h3 class="automation-banner-title">
+              WE MAJORLY DEAL IN INDUSTRIAL PROJECTS TO REDUCE MANUAL WORK &amp; DRIVE AUTOMATION.
+            </h3>
+            <p class="automation-banner-desc">
+              Manual sub-meter logging, physical inspection checks, paper gate registers, and spreadsheet tracking create expensive operational bottlenecks and human error. TEK10 engineers custom hardware-integrated software and intelligent computer-vision systems that take human friction out of industrial operations.
+            </p>
+          </div>
+          <div class="automation-metrics">
+            <div class="automation-metric-box">
+              <div class="automation-metric-val">100%</div>
+              <div class="automation-metric-lbl">Paperless Workflow Transition</div>
+            </div>
+            <div class="automation-metric-box">
+              <div class="automation-metric-val">&lt; 0.1s</div>
+              <div class="automation-metric-lbl">Real-Time Machine Vision Checks</div>
+            </div>
+            <div class="automation-metric-box">
+              <div class="automation-metric-val">24/7</div>
+              <div class="automation-metric-lbl">Continuous Unattended Operation</div>
+            </div>
+            <div class="automation-metric-box">
+              <div class="automation-metric-val">Zero</div>
+              <div class="automation-metric-lbl">Manual Logbook Transcription</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+      <div class="final-cta-glow"></div>
+      <div class="container">
+        <span class="eyebrow">Collaborate With TEK10</span>
+        <h2 class="final-cta-title">HAVE A PROBLEM<br>WORTH BUILDING?</h2>
+        <p class="final-cta-copy">
+          Tell us what you're trying to build. We'll figure out the technology.
+        </p>
+        <div class="final-cta-buttons">
+          <a href="contact.html" class="btn btn-primary">
+            Start a Project <span class="btn-arrow">→</span>
+          </a>
+          <a href="https://wa.me/919579119759?text=Hello%20TEK10%2C%20I%20would%20like%20to%20discuss%20a%20technology%20project." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            Talk to Us on WhatsApp <span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       GLOBAL FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2 class="brand-logo">TEK10<span class="dot"></span></h2>
+          <p class="footer-tagline">
+            Technology Engineering & Digital Product Development.<br>
+            Technology. Built Without Limits.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="capabilities.html">Capabilities</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Capabilities</div>
+          <ul class="footer-list">
+            <li><a href="capabilities.html#web">Web</a></li>
+            <li><a href="capabilities.html#software">Software</a></li>
+            <li><a href="capabilities.html#mobile">Mobile</a></li>
+            <li><a href="capabilities.html#aiml">AI / ML</a></li>
+            <li><a href="capabilities.html#industrial">Industrial Systems</a></li>
+            <li><a href="capabilities.html#automation">Automation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Direct Contact</div>
+          <ul class="footer-list">
+            <li><a href="tel:+919579119759">+91 95791 19759</a></li>
+            <li><a href="mailto:swapnilshinde33777@gmail.com">swapnilshinde33777@gmail.com</a></li>
+            <li><a href="https://wa.me/919579119759?text=Hello%20TEK10%2C%20I%20would%20like%20to%20discuss%20a%20technology%20project." target="_blank" rel="noopener noreferrer">Chat on WhatsApp →</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 TEK10. All rights reserved.</div>
+        <div>You bring the problem. We build the technology.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919579119759?text=Hello%20TEK10%2C%20I%20would%20like%20to%20discuss%20a%20technology%20project." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat directly with TEK10 on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16 2a13.9 13.9 0 0 0-12 21L2 30l7.2-1.9A13.9 13.9 0 1 0 16 2zm0 25.5a11.5 11.5 0 0 1-5.9-1.6l-.4-.3-4.4 1.1 1.2-4.2-.3-.4A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.3-.2-2-.1-2.3-1.1s-.6-.2-.8.2-.9 1.1-1.1 1.3-.4.2-.7 0a9.2 9.2 0 0 1-2.7-1.7 10.2 10.2 0 0 1-1.9-2.3c-.2-.3 0-.5.2-.7l.5-.6a2.3 2.3 0 0 0 .3-.5.7.7 0 0 0 0-.6c0-.2-.8-2-1.1-2.7s-.6-.6-.8-.6h-.7a1.4 1.4 0 0 0-1 .5 4.3 4.3 0 0 0-1.3 3.2c0 1.9 1.4 3.7 1.6 3.9s2.7 4.1 6.5 5.8a22 22 0 0 0 2.2.8 5.3 5.3 0 0 0 2.4.2c.7-.1 2.3-.9 2.6-1.8s.3-1.6.2-1.8c-.1-.1-.3-.2-.6-.4z"/>
+    </svg>
+    <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+  </a>
+
+  <!-- Project Scripts -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
+

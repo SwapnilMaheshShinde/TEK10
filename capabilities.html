@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capabilities — TEK10 | Technology Engineering & Product Development</title>
+  <meta name="description" content="Explore TEK10's engineering capabilities across Web, Custom Software, Mobile, AI/ML, Generative AI, Industrial Systems, and Cloud Backends.">
+  <meta name="theme-color" content="#07080a">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Capabilities — TEK10 Technology Engineering">
+  <meta property="og:description" content="We don't sell a fixed technology stack. We engineer what the problem requires.">
+  <meta property="og:site_name" content="TEK10">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Theme Initialization Script -->
+  <script>
+    (function() {
+      const saved = localStorage.getItem('tek10-theme');
+      const theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Background Ambience -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-grain" aria-hidden="true"></div>
+
+  <!-- Accessible Skip Link -->
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+
+  <!-- =========================================================
+       GLOBAL NAVIGATION
+       ========================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" aria-label="TEK10 Home">
+        TEK10<span class="dot"></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="capabilities.html" class="nav-link active" aria-current="page">Capabilities</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions-group">
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch between dark and light mode" title="Toggle theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="contact.html" class="nav-cta">
+          Let's Build <span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="nav-toggle" id="navBurger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Full-Screen Mobile Drawer Navigation -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-nav-links" aria-label="Mobile Navigation">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="work.html" class="mobile-nav-link">Work</a>
+      <a href="capabilities.html" class="mobile-nav-link active">Capabilities</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </nav>
+
+    <div class="mobile-menu-footer">
+      <div style="display: flex; gap: 1rem; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+        <button class="theme-toggle" aria-label="Toggle theme" style="width: auto; padding: 0.6rem 1rem; gap: 0.5rem;">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <span style="font-family: var(--font-mono); font-size: 0.78rem;">Toggle Theme</span>
+        </button>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Start a Project →</a>
+      <div class="mobile-menu-meta">
+        <a href="tel:+919579119759">+91 95791 19759</a>
+        <a href="mailto:swapnilshinde33777@gmail.com">swapnilshinde33777@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       MAIN CONTENT: CAPABILITIES
+       ========================================================= -->
+  <main id="mainContent" style="padding-top: 140px;">
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="eyebrow">Engineering Domains & Technical Breadth</div>
+        <h1 class="hero-title" style="margin-bottom: 1rem;">WHAT WE BUILD</h1>
+        <p class="hero-description" style="max-width: 760px; margin-bottom: 4rem;">
+          We don't sell a fixed technology stack. We engineer what the problem requires. From cloud interfaces to hardware telemetry and intelligent computer vision, our multidisciplinary engineering delivers production-grade software. We majorly deal in industrial projects that eliminate manual work, human error, and operational friction through high-reliability automation.
+        </p>
+
+        <!-- CAPABILITIES STACK -->
+        <div class="capabilities-grid">
+
+          <!-- 01 WEB -->
+          <article class="capability-block" id="web">
+            <div class="capability-header">
+              <span class="capability-num">01 / CAPABILITIES</span>
+              <h2 class="capability-name">WEB</h2>
+            </div>
+            <div class="capability-items-grid">
+              <div class="cap-card">
+                <h3 class="cap-card-title">Business Websites</h3>
+                <p class="cap-card-desc">High-performance digital presences tailored for modern brand positioning, speed, and clean typography.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Corporate Websites</h3>
+                <p class="cap-card-desc">Multilingual, compliant corporate portals designed with strong editorial layouts and enterprise authority.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Web Applications</h3>
+                <p class="cap-card-desc">Complex browser-based applications with role-based workflows, state management, and real-time sockets.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Dashboards</h3>
+                <p class="cap-card-desc">High-density telemetry, KPI tracking, and interactive visualizations built for mission-critical operations.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">E-commerce</h3>
+                <p class="cap-card-desc">Secure checkout pipelines, inventory synchronization, and performant product catalog architectures.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Custom Platforms</h3>
+                <p class="cap-card-desc">Bespoke web platforms built from the ground up to solve unique business and logistical friction.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 02 SOFTWARE -->
+          <article class="capability-block" id="software">
+            <div class="capability-header">
+              <span class="capability-num">02 / CAPABILITIES</span>
+              <h2 class="capability-name">SOFTWARE</h2>
+            </div>
+            <div class="capability-items-grid">
+              <div class="cap-card">
+                <h3 class="cap-card-title">Enterprise Software</h3>
+                <p class="cap-card-desc">Scalable internal tools, departmental workflows, audit trails, and data compliance platforms.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Industrial Software</h3>
+                <p class="cap-card-desc">Plant floor software, machine health monitoring, shift reporting, and edge telemetry collection.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Monitoring Systems</h3>
+                <p class="cap-card-desc">Continuous telemetry trackers with anomaly alerts, threshold detection, and historic analytics.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Management Platforms</h3>
+                <p class="cap-card-desc">Custom ERP/CRM modules, vendor access gateways, and operational approval workflows.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Automation</h3>
+                <p class="cap-card-desc">Process automation pipelines that replace manual handoffs, reducing human error and latency.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Custom Applications</h3>
+                <p class="cap-card-desc">Software engineered specifically around your operating procedures rather than generic SaaS constraints.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 03 MOBILE -->
+          <article class="capability-block" id="mobile">
+            <div class="capability-header">
+              <span class="capability-num">03 / CAPABILITIES</span>
+              <h2 class="capability-name">MOBILE</h2>
+            </div>
+            <div class="capability-items-grid">
+              <div class="cap-card">
+                <h3 class="cap-card-title">Android Engineering</h3>
+                <p class="cap-card-desc">Optimized native and modern Android applications tested across wide device ecosystems.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">iOS Engineering</h3>
+                <p class="cap-card-desc">Refined Apple ecosystem applications with seamless gestures, biometric security, and fluid UI.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Cross-Platform Apps</h3>
+                <p class="cap-card-desc">Unified codebases delivering 60fps native feel across both mobile platforms with rapid iterations.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Business Applications</h3>
+                <p class="cap-card-desc">Executive dashboards, client communication hubs, and internal customer management on the go.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Operational Field Apps</h3>
+                <p class="cap-card-desc">Offline-first mobile utilities for factory operators, delivery inspection, gate passes, and field surveys.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 04 AI / MACHINE LEARNING -->
+          <article class="capability-block" id="aiml">
+            <div class="capability-header">
+              <span class="capability-num">04 / CAPABILITIES</span>
+              <h2 class="capability-name">AI & ML</h2>
+            </div>
+            <div class="capability-items-grid">
+              <div class="cap-card">
+                <h3 class="cap-card-title">Machine Learning</h3>
+                <p class="cap-card-desc">Supervised and unsupervised models tailored for structured operational datasets and trend analysis.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Computer Vision</h3>
+                <p class="cap-card-desc">Real-time image and video processing for counting, inspection, optical verification, and security.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Image Processing</h3>
+                <p class="cap-card-desc">Noise filtering, edge detection, perspective transformations, and thermal imaging pipelines.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Object Detection</h3>
+                <p class="cap-card-desc">Custom model training (YOLO, custom CNNs) with bounding boxes, confidence scoring, and tracking.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Classification</h3>
+                <p class="cap-card-desc">Automated defect categorization, sorting systems, and multi-class production line verification.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Predictive Systems</h3>
+                <p class="cap-card-desc">Forecasting models for industrial energy consumption, preventive maintenance, and material flow.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 05 GENERATIVE AI -->
+          <article class="capability-block" id="genai">
+            <div class="capability-header">
+              <span class="capability-num">05 / CAPABILITIES</span>
+              <h2 class="capability-name">GEN AI</h2>
+            </div>
+            <div class="capability-items-grid">
+              <div class="cap-card">
+                <h3 class="cap-card-title">LLM Applications</h3>
+                <p class="cap-card-desc">Production integration of large language models for domain-specific automation and contextual logic.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">RAG Systems</h3>
+                <p class="cap-card-desc">Retrieval-Augmented Generation across internal enterprise PDFs, SOP manuals, and proprietary docs.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">AI Assistants & Chatbots</h3>
+                <p class="cap-card-desc">Intelligent, safe, deterministic conversational agents for customer support and internal helpdesks.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Document Intelligence</h3>
+                <p class="cap-card-desc">Automated invoice extraction, technical drawing metadata parsing, and semantic document summarization.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">AI Workflows & Agents</h3>
+                <p class="cap-card-desc">Multi-step autonomous agent pipelines connecting LLM reasoning directly to internal databases and APIs.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 06 BACKEND / CLOUD -->
+          <article class="capability-block" id="backend">
+            <div class="capability-header">
+              <span class="capability-num">06 / CAPABILITIES</span>
+              <h2 class="capability-name">BACKEND & CLOUD</h2>
+            </div>
+            <div class="capability-items-grid">
+              <div class="cap-card">
+                <h3 class="cap-card-title">APIs & Microservices</h3>
+                <p class="cap-card-desc">REST, GraphQL, and WebSocket architectures designed for high concurrency and strict data contracts.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">FastAPI & Python</h3>
+                <p class="cap-card-desc">High-throughput asynchronous Python backends bridging ML inference with real-time web layers.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Node.js Ecosystem</h3>
+                <p class="cap-card-desc">Event-driven server runtimes powering scalable real-time integrations and notification services.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Databases & Schemas</h3>
+                <p class="cap-card-desc">PostgreSQL, Redis caching, and time-series engines modeled for zero data loss and sub-second queries.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Authentication & Security</h3>
+                <p class="cap-card-desc">Role-Based Access Control (RBAC), OAuth2, JWTs, and end-to-end encryption across all transmission layers.</p>
+              </div>
+              <div class="cap-card">
+                <h3 class="cap-card-title">Cloud Architecture</h3>
+                <p class="cap-card-desc">Containerized deployments, automated CI/CD pipelines, reverse proxies, and resilient server infrastructure.</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering Principles / Production Standards -->
+    <section class="section section-border-top">
+      <div class="container">
+        <span class="eyebrow">Engineering Standards</span>
+        <h2 class="editorial-title" style="margin-bottom: 2.5rem;">HOW WE ENGINEER</h2>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Problem-First Architecture</h3>
+            <p>
+              We never start with a preconceived technology stack. We study the operating environment, latency tolerance, user constraints, and data flows first — then engineer the exact technology required to solve the problem reliably.
+            </p>
+          </div>
+          <div class="about-card">
+            <h3>Production-Hardened Reliability</h3>
+            <p>
+              Software is only valuable if it continues to work under stress. We build with automated health-checks, clean exception recovery, edge buffering during network outages, and strict zero-trust authentication.
+            </p>
+          </div>
+          <div class="about-card">
+            <h3>Manual Labor Elimination</h3>
+            <p>
+              Our primary operational objective in industrial software is eliminating manual friction. We replace paper registers, walk-around meter readings, and physical tallies with automated digital pipelines that run 24/7.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+      <div class="final-cta-glow"></div>
+      <div class="container">
+        <span class="eyebrow">Ready to Engineer</span>
+        <h2 class="final-cta-title">HAVE A PROBLEM<br>WORTH BUILDING?</h2>
+        <p class="final-cta-copy">
+          Tell us what you're trying to build. We'll figure out the technology.
+        </p>
+        <div class="final-cta-buttons">
+          <a href="contact.html" class="btn btn-primary">
+            Start a Project <span class="btn-arrow">→</span>
+          </a>
+          <a href="https://wa.me/919579119759?text=Hello%20TEK10%2C%20I%20would%20like%20to%20discuss%20a%20technology%20project." target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            Talk to Us on WhatsApp <span class="btn-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       GLOBAL FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2 class="brand-logo">TEK10<span class="dot"></span></h2>
+          <p class="footer-tagline">
+            Technology Engineering & Digital Product Development.<br>
+            Technology. Built Without Limits.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="capabilities.html">Capabilities</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Capabilities</div>
+          <ul class="footer-list">
+            <li><a href="capabilities.html#web">Web</a></li>
+            <li><a href="capabilities.html#software">Software</a></li>
+            <li><a href="capabilities.html#mobile">Mobile</a></li>
+            <li><a href="capabilities.html#aiml">AI / ML</a></li>
+            <li><a href="capabilities.html#industrial">Industrial Systems</a></li>
+            <li><a href="capabilities.html#automation">Automation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Direct Contact</div>
+          <ul class="footer-list">
+            <li><a href="tel:+919579119759">+91 95791 19759</a></li>
+            <li><a href="mailto:swapnilshinde33777@gmail.com">swapnilshinde33777@gmail.com</a></li>
+            <li><a href="https://wa.me/919579119759?text=Hello%20TEK10%2C%20I%20would%20like%20to%20discuss%20a%20technology%20project." target="_blank" rel="noopener noreferrer">Chat on WhatsApp →</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 TEK10. All rights reserved.</div>
+        <div>You bring the problem. We build the technology.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919579119759?text=Hello%20TEK10%2C%20I%20would%20like%20to%20discuss%20a%20technology%20project." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat directly with TEK10 on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16 2a13.9 13.9 0 0 0-12 21L2 30l7.2-1.9A13.9 13.9 0 1 0 16 2zm0 25.5a11.5 11.5 0 0 1-5.9-1.6l-.4-.3-4.4 1.1 1.2-4.2-.3-.4A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.3-.2-2-.1-2.3-1.1s-.6-.2-.8.2-.9 1.1-1.1 1.3-.4.2-.7 0a9.2 9.2 0 0 1-2.7-1.7 10.2 10.2 0 0 1-1.9-2.3c-.2-.3 0-.5.2-.7l.5-.6a2.3 2.3 0 0 0 .3-.5.7.7 0 0 0 0-.6c0-.2-.8-2-1.1-2.7s-.6-.6-.8-.6h-.7a1.4 1.4 0 0 0-1 .5 4.3 4.3 0 0 0-1.3 3.2c0 1.9 1.4 3.7 1.6 3.9s2.7 4.1 6.5 5.8a22 22 0 0 0 2.2.8 5.3 5.3 0 0 0 2.4.2c.7-.1 2.3-.9 2.6-1.8s.3-1.6.2-1.8c-.1-.1-.3-.2-.6-.4z"/>
+    </svg>
+    <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+  </a>
+
+  <!-- Project Scripts -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
+
